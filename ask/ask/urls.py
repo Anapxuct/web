@@ -27,5 +27,5 @@ urlpatterns = [
     url(r'^new/', found),
     url(r'^admin/', admin.site.urls),
     url(r'^question/', include('qa.urls')),
-    url(r'^', not_found),
+    #url(r'^', not_found),
 ]
