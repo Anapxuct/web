@@ -17,15 +17,16 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from ask.views import found, not_found
+from qa.views import test
 
 urlpatterns = [
-    url(r'^$', found),
+    url(r'^$', test),
     url(r'^login/', found),
     url(r'^signup/', found),
     url(r'^ask/', found),
     url(r'^popular/', found),
     url(r'^new/', found),
     url(r'^admin/', admin.site.urls),
-    url(r'^question/', include('qa.urls')),
+    url(r'^question/', found),
     #url(r'^', not_found),
 ]
